@@ -1,16 +1,10 @@
 import React from 'react';
 
-import {
-  connect
-} from 'react-redux';
+import connect from 'react-redux';
 
-import {
-  bindActionCreators
-} from 'redux';
+import bindActionCreators from 'redux';
 
-import {
-  BrowserRouter
-} from 'react-router-dom';
+import BrowserRouter from 'react-router-dom';
 
 import * as actions from './../../actions/app';
 import Routes from '../Routes';
