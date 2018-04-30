@@ -1,4 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './store';
 
-ReactDOM.render(<h1>React Base</h1>, document.getElementById('root'));
+// components
+import App from './components/App';
+
+render(
+  <Provider
+    store={store}
+  >
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
+
+// hot reload
+if (module.hot) {
+  module.hot.accept(App, () => { render(<App />); });
+}

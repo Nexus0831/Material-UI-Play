@@ -5,22 +5,28 @@ import {
   Switch
 } from 'react-router-dom';
 
-import {
-  Route
-} from 'react-router';
+import { Route } from 'react-router';
+
+import Material from '../Material';
 
 
 class Routes extends React.Component {
   render() {
-    return(
-        <Switch>
-          <Route
-            path="/"
-            exact
-            render={}
-          >
-          </Route>
-        </Switch>
+    return (
+      <Switch>
+        <Route
+          path="/"
+          exact
+          render={
+            props => (
+              <Material
+                {...props}
+              />
+            )
+          }
+          {...this.props}
+        />
+      </Switch>
     );
   }
 }
