@@ -1,17 +1,12 @@
+/* eslint-disable no-class-assign */
 // node_modules
 import React from 'react';
 
-import {
-  connect
-} from 'react-redux';
+import { connect } from 'react-redux';
 
-import {
-  bindActionCreators
-} from 'redux';
+import { bindActionCreators } from 'redux';
 
-import {
-  withRouter
-} from 'react-router';
+import { withRouter } from 'react-router';
 
 import {
   reduxForm,
@@ -33,12 +28,10 @@ class Material extends React.Component {
   }
 }
 
-Material = connect(
-  state => ({
-    formValues: getFormValues('material')(state),
-    valid: isValid('material')(state)
-  })
-)(Material);
+Material = connect(state => ({
+  formValues: getFormValues('material')(state),
+  valid: isValid('material')(state)
+}))(Material);
 
 const mapStateToProps = (state) => {
   return {
@@ -56,7 +49,6 @@ const mapDispatchToProps = (dispatch) => {
   );
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(
-  reduxForm({
-    form: 'material',
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(reduxForm({
+  form: 'material',
 })(Material)));
