@@ -27,6 +27,7 @@ import * as actions from './../../actions/material';
 import {
   CardContainer,
   HeaderContainer,
+  MyButton
 } from './cssinjs';
 
 class Material extends React.Component {
@@ -54,6 +55,9 @@ class Material extends React.Component {
               </Typography>
             </CardContent>
           </Card>
+          <MyButton>
+            styled Components
+          </MyButton>
         </CardContainer>
       </div>
     );
