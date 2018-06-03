@@ -19,19 +19,43 @@ import {
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 
 import * as actions from './../../actions/material';
+
+import {
+  CardContainer,
+  HeaderContainer,
+} from './cssinjs';
 
 class Material extends React.Component {
   render() {
     return (
-      <AppBar position="static" color="secondary">
-        <Toolbar>
-          <Typography variant="title" color="inherit">
-            Material-UI-Play
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      <div
+        id="material"
+      >
+        <HeaderContainer>
+          <AppBar
+            color="primary"
+          >
+            <Toolbar>
+              <Typography variant="title" color="inherit">
+                Material-UI-Play
+              </Typography>
+            </Toolbar>
+          </AppBar>
+        </HeaderContainer>
+        <CardContainer>
+          <Card>
+            <CardContent>
+              <Typography variant="headline" component="h2">
+                Card Example
+              </Typography>
+            </CardContent>
+          </Card>
+        </CardContainer>
+      </div>
     );
   }
 }
