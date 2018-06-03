@@ -16,14 +16,22 @@ import {
   initialize
 } from 'redux-form';
 
-import AppBar from 'material-ui/AppBar';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 
 import * as actions from './../../actions/material';
 
 class Material extends React.Component {
   render() {
     return (
-      <AppBar title="My AppBar" />
+      <AppBar position="static" color="secondary">
+        <Toolbar>
+          <Typography variant="title" color="inherit">
+            Material-UI-Play
+          </Typography>
+        </Toolbar>
+      </AppBar>
     );
   }
 }

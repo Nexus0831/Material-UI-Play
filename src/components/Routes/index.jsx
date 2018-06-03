@@ -9,24 +9,34 @@ import { Route } from 'react-router';
 
 import Material from '../Material';
 
+// import { withTheme } from '@material-ui/core/styles';
+// import { theme } from '../../assets/theme';
 
 class Routes extends React.Component {
   render() {
     return (
-      <Switch>
-        <Route
-          path="/"
-          exact
-          render={
-            props => (
-              <Material
-                {...props}
-              />
-            )
-          }
-          {...this.props}
-        />
-      </Switch>
+      <div
+        id="routes"
+        style={{
+          height: '100%'
+        }}
+      >
+        <Switch>
+          <Route
+            path="/"
+            exact
+            render={
+              props => (
+                <Material
+                  {...props}
+                />
+              )
+            }
+            {...this.props}
+          />
+        </Switch>
+      </div>
+
     );
   }
 }

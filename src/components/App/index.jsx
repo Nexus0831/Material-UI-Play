@@ -6,12 +6,13 @@ import { bindActionCreators } from 'redux';
 
 import { BrowserRouter } from 'react-router-dom';
 
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+// import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import { MuiThemeProvider } from '@material-ui/core/styles';
+// import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 import * as actions from './../../actions/app';
 import Routes from '../Routes';
+import { theme } from '../../assets/theme';
 
 
 class App extends React.Component {
@@ -23,7 +24,7 @@ class App extends React.Component {
         }}
       >
         <BrowserRouter>
-          <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+          <MuiThemeProvider theme={theme} >
             <Routes
               {...this.props}
             />
