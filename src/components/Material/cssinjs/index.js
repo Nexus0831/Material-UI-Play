@@ -15,13 +15,12 @@ export const HeaderContainer = styled.div`
 
 export const MyButton = styled(Button)`
   background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
-  // backgroundColor: 'red',
-  border-radius: 3;
+  border-radius: 3px;
   border: 0;
   color: white;
   height: 48px;
   padding: 0 30px;
-  box-shadow: 0 3px 5px 2px rgba(255, 105, 135, .30);
+  box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.2),0 2px 2px 0 rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12);
 `;
 
 export const BaseContainer = styled.div`

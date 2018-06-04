@@ -17,7 +17,8 @@ import {
 } from 'redux-form';
 
 import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
+import Toolbar from '@material-ui/core/Toolbar'
+import Checkbox from '@material-ui/core/Checkbox';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -55,9 +56,12 @@ class Material extends React.Component {
               </Typography>
             </CardContent>
           </Card>
+          <br />
           <MyButton>
             styled Components
           </MyButton>
+          <br />
+          <Checkbox />
         </CardContainer>
       </div>
     );
